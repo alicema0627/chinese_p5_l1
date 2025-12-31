@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的世界還不錯吧？- 互動學習網</title>
+    <style>
+        /* 整體風格設定 */
+        :root {
+            --primary-blue: #00a8ff;
+            --soft-yellow: #fff9ae;
+            --ocean-dark: #0077be;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0faff;
+            color: var(--text-color);
+            line-height: 1.8;
+        }
+
+        /* 標題區 */
+        header {
+            background: linear-gradient(135deg, #74b9ff, #00a8ff);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-bottom-left-radius: 50% 20px;
+            border-bottom-right-radius: 50% 20px;
+        }
+
+        h1 { margin: 0; font-size: 2.5em; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .subtitle { font-size: 1.2em; opacity: 0.9; margin-top: 10px; }
+
+        /* 內容區塊 */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            color: var(--ocean-dark);
+            border-left: 5px solid var(--primary-blue);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* 課文段落樣式 */
+        .paragraph {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .paragraph:hover {
+            transform: scale(1.02);
+            background: #f9feff;
+        }
+
+        .teacher-note {
+            background: #e1f5fe;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            font-size: 0.95em;
+            color: #0277bd;
+            display: flex;
+            align-items: center;
+        }
+
+        .teacher-note:before {
+            content: "💡 解說：";
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* 圖片佔位符 */
+        .illustration {
+            width: 100%;
+            height: 250px;
+            background: #eee;
+            margin: 20px 0;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-style: italic;
+            border: 2px dashed #ccc;
+        }
+
+        /* 詞語表 */
+        .vocabulary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .vocab-item {
+            background: var(--soft-yellow);
+            padding: 8px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* 測驗區 */
+        .quiz-section {
+            background: #fff4e5;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 40px;
+        }
+
+        .question { margin-bottom: 20px; font-weight: bold; }
+        .options button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 2px solid #ffcc80;
+            border-radius: 10px;
+            background: white;
+            cursor: pointer;
+            font-size: 1em;
+            text-align: left;
+            transition: all 0.2s;
+        }
+
+        .options button:hover { background: #fff8e1; }
+        .feedback { margin-top: 10px; font-weight: bold; display: none; padding: 10px; border-radius: 5px; }
+        .correct { color: #2e7d32; background: #e8f5e9; display: block; }
+        .wrong { color: #c62828; background: #ffebee; display: block; }
+
+        footer { text-align: center; padding: 40px; color: #888; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🌊 我的世界還不錯吧？</h1>
+    <p class="subtitle">中文科 五年級下冊 | 感受不同的視界</p>
+</header>
+
+<div class="container">
+    
+    <div class="paragraph">
+        <p>「小妹妹，你可以給我說說沙灘的景色嗎？」大姐姐輕聲問道。我挨近她，開始描繪眼前的景物。</p>
+        <div class="teacher-note">大姐姐雖然看不見，但她對世界充滿好奇。</div>
+    </div>
+
+    
+    <div class="paragraph">
+        <p>「淺藍的天空上，有一抹薄薄的白雲。幾隻海鷗來回滑翔，飛起來不費一點兒勁，好像在滑冰。大海呢？近處是綠色的，愈遠愈藍。」 </p>
+        <div class="teacher-note">作者用了「視覺」來觀察，形容海鷗像在「滑冰」，非常生動！ </div>
+    </div>
+
+    <div class="paragraph">
+        <h3 class="section-title">換一種方式看世界</h3>
+        <p>「閉上眼睛，輪到我向你介紹這個沙灘了。」大姐姐用很小的聲音說：「你聽見甚麼？」</p>
+        <p>「我聽見一陣一陣的海浪聲……風搖動樹木，葉子就沙沙作響。遊人在高聲笑鬧，原來海鷗是會唱歌的。」 </p>
+        <div class="teacher-note">當我們閉上眼，聽覺就會變得靈敏。你聽過大海的歌聲嗎？</div>
+    </div>
+
+    
+    <div class="paragraph">
+        <p>大姐姐把我的手輕輕按到沙上。沙粒在我的指縫間流動，我感覺癢癢的。原來這兒的沙又細又滑，踏上去像地毯那樣柔軟。 </p>
+        <p>「真涼快啊！」我笑起來。我們就這樣站在水邊，讓海浪輕吻我們的腳趾、腳踝。 </p>
+        <div class="teacher-note">除了聽覺，還有「觸覺」和「嗅覺」。大海的世界是豐富多彩的！ </div>
+    </div>
+
+    <h3 class="section-title">✨ 本課詞語學習</h3>
+    <div class="vocabulary-grid">
+        <div class="vocab-item">描繪 </div>
+        <div class="vocab-item">巡邏 </div>
+        <div class="vocab-item">疑惑 </div>
+        <div class="vocab-item">可惜 </div>
+        <div class="vocab-item">觸摸 </div>
+        <div class="vocab-item">瀰漫 </div>
+        <div class="vocab-item">腳踝 </div>
+        <div class="vocab-item">豐富 </div>
+    </div>
+
+    <div class="quiz-section">
+        <h2 style="text-align: center;">📝 隨堂測驗</h2>
+        
+        <div id="q1">
+            <p class="question">1. 大姐姐為什麼無法看見風景？</p>
+            <div class="options">
+                <button onclick="checkAnswer(1, 'A')">A. 因為她戴著太陽眼鏡</button>
+                <button onclick="checkAnswer(1, 'B')">B. 因為小時候患過一場病 </button>
+                <button onclick="checkAnswer(1, 'C')">C. 因為沙灘陽光太刺眼</button>
+            </div>
+            <div id="feedback1" class="feedback"></div>
+        </div>
+
+        <hr>
+
+        <div id="q2">
+            <p class="question">2. 當作者閉上眼後，她聽到海鷗在做什麼？</p>
+            <div class="options">
+                <button onclick="checkAnswer(2, 'A')">A. 唱歌</button>
+                <button onclick="checkAnswer(2, 'B')">B. 衝浪</button>
+                <button onclick="checkAnswer(2, 'C')">C. 滑冰</button>
+            </div>
+            <div id="feedback2" class="feedback"></div>
+        </div>
+
+        <hr>
+
+        <div id="q3">
+            <p class="question">3. 作者最後覺得大姐姐的世界怎麼樣？</p>
+            <div class="options">
+                <button onclick="checkAnswer(3, 'A')">A. 很安靜</button>
+                <button onclick="checkAnswer(3, 'B')">B. 很可惜</button>
+                <button onclick="checkAnswer(3, 'C')">C. 比想像中豐富得多</button>
+            </div>
+            <div id="feedback3" class="feedback"></div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2024 互動學習網 - 用心感受世界的美好</p>
+</footer>
+
+<script>
+    function checkAnswer(qNum, choice) {
+        const feedback = document.getElementById('feedback' + qNum);
+        let isCorrect = false;
+
+        if (qNum === 1 && choice === 'B') isCorrect = true;
+        if (qNum === 2 && choice === 'A') isCorrect = true;
+        if (qNum === 3 && choice === 'C') isCorrect = true;
+
+        if (isCorrect) {
+            feedback.innerHTML = "🌟 太棒了！你觀察得很仔細喔！";
+            feedback.className = "feedback correct";
+        } else {
+            feedback.innerHTML = "❌ 再讀一次課文找找看答案吧！";
+            feedback.className = "feedback wrong";
+        }
+    }
+</script>
+
+</body>
+</html>
